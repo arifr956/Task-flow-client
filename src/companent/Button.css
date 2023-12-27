@@ -1,0 +1,44 @@
+.dashbord {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #0383fa;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .dashbord::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .dashbord::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+  }
+  
+  .dashbord:hover::before, .dashbord:hover::after {
+    transform: scale(0)
+  }
+  
+  .dashbord:hover {
+    box-shadow: inset 0px 0px 25px #0284ff;
+  }
